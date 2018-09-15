@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.Pos">
+   <styleClass>
+      <String fx:value="contentView" />
+      <String fx:value="space5" />
+   </styleClass>
+   <children>
+      <VBox prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+               <styleClass>
+                  <String fx:value="content-box" />
+                  <String fx:value="color-600" />
+               </styleClass>
+               <children>
+                  <Label text="Order List">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="orderList" styleClass="shadow" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="orderHeadColumn" prefWidth="75.0" text="Order Head">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="orderHead" />
+                	</cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Total Item">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="totalItem" />
+                	</cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Total Price">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="totalPrice" />
+                	</cellValueFactory>
+                </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER_LEFT">
+               <styleClass>
+                  <String fx:value="content-box" />
+                  <String fx:value="color-500" />
+               </styleClass>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#newOrder" prefHeight="32.0" text="New Order">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="245.0" layoutY="20.0" mnemonicParsing="false" onAction="#remove" prefHeight="32.0" text="Remove">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="135.0" layoutY="20.0" mnemonicParsing="false" onAction="#edit" prefHeight="32.0" text="Edit Order">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="25.0" layoutY="20.0" mnemonicParsing="false" onAction="#checkout" prefHeight="32.0" text="Checkout">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="leftColumn" />
+            <String fx:value="space5" />
+         </styleClass></VBox>
+      <VBox prefWidth="100.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="Checkout">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                     </styleClass>
+                  </Label>
+                  <Label fx:id="checkHead" layoutX="25.0" layoutY="25.0">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                     </styleClass>
+                  </Label>
+               </children>
+               <styleClass>
+                  <String fx:value="content-box" />
+                  <String fx:value="color-600" />
+               </styleClass>
+            </HBox>
+            <TableView fx:id="checkOutTable" editable="true" styleClass="shadow" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="nameColumn" maxWidth="1.7976931348623157E308" minWidth="240.0" prefWidth="240.0" text="Item">
+					<cellValueFactory>
+                		<PropertyValueFactory property="name" />
+                	</cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Qty">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="quantity" />
+                	</cellValueFactory>
+                </TableColumn>
+                <TableColumn maxWidth="133.0" minWidth="133.0" prefWidth="133.0" text="Price">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="totalPrice" />
+                	</cellValueFactory>
+                </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox VBox.vgrow="NEVER">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="120.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.63983154296875" minWidth="10.0" prefWidth="133.4798583984375" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.423583984375" minWidth="10.0" prefWidth="131.6239013671875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Total Price">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Your Money" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Change" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Total Items" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <Label text="Tax" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin></Label>
+                        <TextField fx:id="totalPrice" editable="false" nodeOrientation="RIGHT_TO_LEFT" text="0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="yourMoney" nodeOrientation="RIGHT_TO_LEFT" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="change" editable="false" nodeOrientation="RIGHT_TO_LEFT" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="totalItem" editable="false" nodeOrientation="RIGHT_TO_LEFT" text="0" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField nodeOrientation="RIGHT_TO_LEFT" text="5%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin></TextField>
+                     </children>
+                     <styleClass>
+                        <String fx:value="padd5" />
+                        <String fx:value="vgap5" />
+                        <String fx:value="hgap5" />
+                     </styleClass>
+                  </GridPane>
+                  <Separator />
+                  <GridPane styleClass="padd5">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Total Price">
+                           <styleClass>
+                              <String fx:value="bold-text" />
+                              <String fx:value="fs20" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="2850Ks" GridPane.columnIndex="1">
+                           <styleClass>
+                              <String fx:value="bold-text" />
+                              <String fx:value="fs18" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets right="15.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <styleClass>
+                  <String fx:value="color-600" />
+                  <String fx:value="checkout-mid" />
+               </styleClass>
+            </VBox>
+            <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+               <styleClass>
+                  <String fx:value="space5" />
+                  <String fx:value="checkout-footer" />
+               </styleClass>
+               <children>
+                  <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#clearCheckOut" text="Clear">
+                     <graphic>
+                        <SVGPath content="M18.984 3.984v2.016h-13.969v-2.016h3.469l1.031-0.984h4.969l1.031 0.984h3.469zM6 18.984v-12h12v12c0 1.078-0.938 2.016-2.016 2.016h-7.969c-1.078 0-2.016-0.938-2.016-2.016z" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="fs20" />
+                        <String fx:value="color-700" />
+                     </styleClass>
+                  </Button>
+                  <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#paid" text="Paid">
+                     <graphic>
+                        <SVGPath content="M13.406 18.094c1.734-0.328 3.141-1.313 3.141-3.141 0-2.531-2.203-3.422-4.219-3.938s-2.625-1.078-2.625-1.922c0-0.938 0.891-1.641 2.391-1.641 1.594 0 2.156 0.75 2.203 1.875h1.969c-0.047-1.547-0.984-2.906-2.859-3.375v-1.969h-2.672v1.969c-1.734 0.375-3.094 1.453-3.094 3.188 0 2.063 1.688 3.047 4.172 3.656 2.25 0.516 2.672 1.313 2.672 2.156 0 0.609-0.422 1.594-2.391 1.594-1.828 0-2.578-0.844-2.672-1.875h-1.969c0.094 1.922 1.594 3 3.281 3.375v1.969h2.672v-1.922zM12 2.016c5.531 0 9.984 4.453 9.984 9.984s-4.453 9.984-9.984 9.984-9.984-4.453-9.984-9.984 4.453-9.984 9.984-9.984z" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="fs20" />
+                        <String fx:value="color-700" />
+                     </styleClass>
+                  </Button>
+                  <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#print" text="Print">
+                     <graphic>
+                        <SVGPath content="M18 3v3.984h-12v-3.984h12zM18.984 12c0.563 0 1.031-0.422 1.031-0.984s-0.469-1.031-1.031-1.031-0.984 0.469-0.984 1.031 0.422 0.984 0.984 0.984zM15.984 18.984v-4.969h-7.969v4.969h7.969zM18.984 8.016c1.641 0 3 1.359 3 3v6h-3.984v3.984h-12v-3.984h-3.984v-6c0-1.641 1.359-3 3-3h13.969z" />
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="fs20" />
+                        <String fx:value="color-700" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <styleClass>
+            <String fx:value="rightColumn" />
+            <String fx:value="space5" />
+         </styleClass></VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/application.css" />
+      <URL value="@../styles/color-blue.css" />
+      <URL value="@../styles/table-blue.css" />
+   </stylesheets>
+</HBox>

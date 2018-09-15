@@ -1,0 +1,56 @@
+TableView {
+	-fx-border-color: #7B1FA2;
+	-fx-border-radius: 2px;
+	-fx-background-radius: 2px;
+	-fx-padding: 0;
+}
+
+TableView .arrow {
+	-fx-background-color: #fff;
+}
+
+TableView:focused {
+	-fx-background-color: transparent , -fx-box-border, -fx-control-inner-background;
+}
+
+TableView .filler {
+	-fx-background-color: #7B1FA2;
+}
+
+TableView .column-header {
+	-fx-border-color: #fff;
+	-fx-border-width: 0.1;
+	-fx-background-color: #7B1FA2;
+	-fx-pref-height: 50px;
+}
+
+TableView .table-cell {
+	-fx-alignment: center;
+	-fx-min-height: 40px;
+}
+
+TableView .table-row-cell:selected {
+	-fx-background-color: #CE93D8;
+}
+
+TableView .table-row-cell:selected Text {
+	-fx-fill: #212121;
+}
+
+TableView .table-row-cell:selected .table-cell {
+	-fx-text-fill: #212121;
+}
+
+TableView .table-row-cell:selected .custom-chip {
+	-fx-text-fill: #6A1B9A;
+}
+
+TableView .column-header SVGPath, Label {
+	-fx-fill: white;
+	-fx-text-fill: white;	
+}
+
+TableView .column-header.header-left15 Label {
+	-fx-alignment: center-left;
+	-fx-padding: 0 15 0 15;
+}

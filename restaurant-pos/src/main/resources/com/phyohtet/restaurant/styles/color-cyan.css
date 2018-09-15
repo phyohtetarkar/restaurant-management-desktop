@@ -1,0 +1,148 @@
+.color-50 {
+	-fx-background-color: #E0F7FA;
+}
+
+.color-100 {
+	-fx-background-color: #B2EBF2;
+}
+
+.color-200 {
+	-fx-background-color: #80DEEA;
+}
+
+.color-300 {
+	-fx-background-color: #4DD0E1;
+}
+
+.color-400 {
+	-fx-background-color: #26C6DA;
+}
+
+.color-500 {
+	-fx-background-color: #00BCD4;
+}
+
+.color-600 {
+	-fx-background-color: #00ACC1;
+}
+
+.color-700 {
+	-fx-background-color: #0097A7;
+}
+
+.color-800 {
+	-fx-background-color: #00838F;
+}
+
+.color-900 {
+	-fx-background-color: #006064;
+}
+
+.color-accent {
+	-fx-background-color: #FDD835;
+}
+
+.color-50 Label,
+.color-100 Label,
+.color-200 Label,
+.color-300 Label,
+.color-400 Label,
+.color-500 Label {
+	-fx-text-fill: #006064;
+}
+
+.color-600 Label,
+.color-700 Label,
+.color-800 Label,
+.color-900 Label {
+	-fx-text-fill: #fff;
+}
+
+.color-yellow-600 Label {
+	-fx-text-fill: #424242;
+}
+
+.color-50 Button,
+.color-100 Button,
+.color-200 Button,
+.color-300 Button {
+	-fx-text-fill: #424242;
+}
+
+.color-400 Button,
+.color-500 Button,
+.color-600 Button,
+.color-700 Button,
+.color-800 Button,
+.color-900 Button {
+	-fx-text-fill: #fff;
+}
+
+.color-50 SVGPath,
+.color-100 SVGPath,
+.color-200 SVGPath,
+.color-300 SVGPath,
+.color-400 SVGPath,
+.color-500 SVGPath {
+	-fx-fill: #424242;
+}
+
+.color-600 SVGPath,
+.color-700 SVGPath,
+.color-800 SVGPath,
+.color-900 SVGPath {
+	-fx-fill: #fff;
+}
+
+.text-fill-default {
+	-fx-text-fill: #fff;
+}
+
+.text-fill-inverse {
+	-fx-text-fill: #424242;
+}
+
+.text-fill-default SVGPath {
+	-fx-fill: #fff;
+}
+
+.text-fill-inverse SVGPath {
+	-fx-fill: #424242;
+}
+
+.naviView Button:pressed, 
+.checkout-footer Button:pressed {
+	-fx-background-color: #006064;
+}
+
+.customize-border {
+	-fx-border-color: #00838F;
+	-fx-border-radius: 2px;
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color: transparent;
+}
+
+.customize-combo .combo-box-popup .list-view {
+    -fx-background-color: #fff;
+    -fx-border-color: #9E9E9E;
+    -fx-border-radius: 2px;
+}
+
+.customize-combo .combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #00ACC1;
+    -fx-text-fill: #fff;
+}
+
+.customize-combo .combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #00ACC1;
+    -fx-text-fill: #fff;
+}
+
+.list-view .list-cell:filled:selected {
+	-fx-background-color: #00ACC1;
+    -fx-text-fill: #fff;
+}
+
+.shadowSolid {
+	-fx-effect: dropshadow(two-pass-box, #B2EBF2, 0.7, 3, 2, 2);
+}

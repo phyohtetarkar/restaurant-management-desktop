@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="form-more-container" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.subscene.AddMoreItem">
+	<stylesheets>
+		<URL value="@../../styles/application.css" />
+		<URL value="@../../styles/color-blue.css" />
+		<URL value="@../../styles/table-blue.css" />
+	</stylesheets>
+	<children>
+		<HBox alignment="CENTER_LEFT">
+			<styleClass>
+				<String fx:value="content-box" />
+				<String fx:value="color-600" />
+			</styleClass>
+			<children>
+				<Label text="Add Multi Item">
+					<styleClass>
+						<String fx:value="bold-text" />
+						<String fx:value="fs16" />
+					</styleClass>
+				</Label>
+			</children>
+		</HBox>
+		<TableView fx:id="table" editable="true" prefHeight="200.0" prefWidth="200.0" styleClass="shadow" VBox.vgrow="ALWAYS">
+			<columns>
+				<TableColumn fx:id="nameCol" prefWidth="75.0" text="Name">
+					<cellValueFactory>
+						<PropertyValueFactory property="name" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Category">
+					<cellValueFactory>
+						<PropertyValueFactory property="category" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="typeCol" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" text="Type">
+					<cellValueFactory>
+						<PropertyValueFactory property="type" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="priceCol" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" text="Price">
+					<cellValueFactory>
+						<PropertyValueFactory property="price" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="taxCol" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" text="Tax">
+					<cellValueFactory>
+						<PropertyValueFactory property="tax" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+			<columnResizePolicy>
+				<TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+			</columnResizePolicy>
+		</TableView>
+		<HBox alignment="CENTER_RIGHT">
+			<styleClass>
+				<String fx:value="content-box" />
+				<String fx:value="color-500" />
+			</styleClass>
+			<children>
+				<Button mnemonicParsing="false" onAction="#back" text="Back">
+               <styleClass>
+                  <String fx:value="width-100" />
+                  <String fx:value="accent-button" />
+               </styleClass>
+				</Button>
+				<Button layoutX="605.0" layoutY="22.0" mnemonicParsing="false" onAction="#save" text="Save">
+               <styleClass>
+                  <String fx:value="width-100" />
+                  <String fx:value="accent-button" />
+               </styleClass>
+				</Button>
+			</children>
+		</HBox>
+	</children>
+</VBox>

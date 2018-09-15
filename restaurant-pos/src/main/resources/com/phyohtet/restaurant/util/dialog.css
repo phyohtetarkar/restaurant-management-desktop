@@ -1,0 +1,32 @@
+.dialog-pane {
+  	-fx-background-color: #fff;
+}
+
+.dialog-pane .button {
+   -fx-background-color: transparent;
+   -fx-text-fill: #1976D2;
+   -fx-cursor: hand;
+   -fx-font-weight: bold;
+}
+
+.dialog-pane .button:pressed {
+   -fx-background-color: rgb(0.0, 0.0, 0.0, 0.1);
+}
+
+.dialog-pane .button:hover {
+   -fx-background-color: rgb(0.0, 0.0, 0.0, 0.1);
+}
+
+.dialog-pane .button-bar .container {
+  -fx-spacing: 2px;
+}
+
+.dialog-pane .content.label {
+    -fx-alignment: center-left;
+    -fx-text-fill: #686868;
+    -fx-padding: 1em 0.833em 0 0.833em;
+}
+
+.dialog-pane:no-header .graphic-container {
+    -fx-alignment: center-left;
+}

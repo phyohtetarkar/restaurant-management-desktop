@@ -1,0 +1,35 @@
+.menu-bar {
+	-fx-background-color: #fff;
+}
+
+.menu-bar .menu {
+	-fx-cursor: hand;
+}
+
+.menu-bar .label {
+	-fx-text-fill: #00;
+}
+
+.menu-bar .menu:hover, .menu:showing {
+}
+
+.menu-bar .menu:hover .label {
+	-fx-text-fill: #000;
+}
+
+.menu-bar .menu:showing .label {
+	-fx-text-fill: #000;
+}
+
+.menu-item:focused {
+	-fx-background-color: #B0BEC5;
+}
+
+.menu-item .label {
+	-fx-text-fill: #fff;
+}
+
+.context-menu {
+	-fx-background-color: #fff;
+	-fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+}

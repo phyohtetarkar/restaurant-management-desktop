@@ -1,0 +1,58 @@
+TableView {
+	-fx-border-color: #455A64;
+	-fx-border-radius: 2px;
+	-fx-background-radius: 2px;
+	-fx-padding: 0;
+	-fx-effect: dropshadow( gaussian , rgba(0.0,0.0,0.0,0.5) , 4.0,0.0,0.0,1.0 );
+}
+
+TableView .arrow {
+	-fx-background-color: #fff;
+}
+
+TableView:focused {
+	-fx-background-color: transparent , -fx-box-border, -fx-control-inner-background;
+}
+
+TableView .filler {
+	-fx-background-color: #455A64;
+}
+
+TableView .column-header {
+	-fx-border-color: #fff;
+	-fx-border-width: 0.1;
+	-fx-background-color: #455A64;
+	-fx-pref-height: 47px;
+}
+
+TableView .table-cell {
+	-fx-alignment: center;
+	-fx-min-height: 40px;
+}
+
+TableView .table-row-cell:selected {
+	-fx-background-color: #B0BEC5;
+}
+
+TableView .table-row-cell:selected Text {
+	-fx-fill: #212121;
+}
+
+TableView .table-row-cell:selected .table-cell {
+	-fx-text-fill: #212121;
+}
+
+TableView .column-header SVGPath, Label {
+	-fx-fill: white;
+	-fx-text-fill: white;	
+}
+
+TableView .column-header.header-left35 Label {
+	-fx-alignment: center-left;
+	-fx-padding: 0 35 0 35;
+}
+
+TableView .column-header.header-left15 Label {
+	-fx-alignment: center-left;
+	-fx-padding: 0 15 0 15;
+}

@@ -1,0 +1,395 @@
+@font-face {
+    font-family: Zawgyi-One;
+    src: url('Zawgyi-One.ttf');
+}
+
+TextField, TextArea, TableView .table-cell, .combo-box, .item-box Label, .data-box Label, ListView {
+	-fx-font-family: Zawgyi-One;
+}
+
+.mainFrame {
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 760px;
+}
+
+.halfMainWidth {
+	-fx-pref-width: 640px;
+}
+
+.topView {
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 50px;
+	-fx-max-height: 50px;
+}
+
+.topView Button, ToggleButton {
+	-fx-background-radius: 0;
+	-fx-cursor: hand;
+}
+
+.tabView {
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 40px;
+	-fx-spacing: 5px;
+	-fx-padding: 2 10 2 10;
+	-fx-background-color: #fff;
+	-fx-text-fill: #424242;
+	-fx-font-weight: bold;
+}
+
+.tabView SVGPath {
+	-fx-fill: #424242;
+}
+
+.contentView {
+	-fx-pref-width: 1280px;
+	-fx-pref-height: 700px;
+	-fx-padding: 5px;
+	-fx-background-color: #fff;
+}
+
+.footerView {
+	-fx-pref-width: 1280px;
+	-fx-min-height: 47px;
+	-fx-background-color: #E0E0E0;
+}
+
+.content-box {
+	-fx-background-radius: 2px;
+	-fx-min-height: 50px;
+	-fx-padding: 0 15 0 15;
+	-fx-spacing: 10px;
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 4,0,0,1 );
+}
+
+.content-flat-box {
+	-fx-background-radius: 2 2 0 0;
+	-fx-min-height: 50px;
+	-fx-padding: 0 15 0 15;
+	-fx-spacing: 10px;
+}
+
+.data-box {
+	-fx-min-width: 100;
+	-fx-pref-height: 60px;
+	-fx-padding: 0 15 0 15;
+	-fx-background-radius: 2px;
+	-fx-alignment: center-left;
+	-fx-spacing: 5px;
+}
+
+.item-box {
+	-fx-min-width: 100;
+	-fx-pref-height: 110px;
+	-fx-alignment: center;
+	-fx-background-radius: 2px;
+	-fx-spacing: 2px;
+	-fx-font-size: 12px;
+}
+
+.item-box Label {
+	-fx-wrap-text: true;
+	-fx-alignment: center;
+}
+
+.flowPane-container {
+	-fx-hgap: 10px;
+	-fx-vgap: 10px;
+	-fx-padding: 10px;
+}
+
+.form-container {
+	-fx-pref-width: 600px;
+	-fx-pref-height: 700px;
+	-fx-spacing: 5px;
+	-fx-padding: 5px;
+}
+
+.form-more-container {
+	-fx-pref-width: 950px;
+	-fx-pref-height: 500px;
+	-fx-spacing: 5px;
+	-fx-padding: 5px;
+}
+
+.order-container {
+	-fx-pref-width: 1200px;
+	-fx-pref-height: 600px;
+	-fx-spacing: 5px;
+	-fx-padding: 5px;
+}
+
+.order-leftColumn {
+	-fx-pref-width: 610px;
+	-fx-spacing: 5px;
+}
+
+.order-rightColumn {
+	-fx-pref-width: 400px;
+	-fx-min-width: 400px;
+	-fx-spacing: 5px;
+}
+
+.leftColumn {
+	-fx-pref-width: 770px;
+}
+
+.rightColumn {
+	-fx-min-width: 495px;
+	-fx-pref-width: 495px;
+	-fx-min-height: 550px;
+}
+
+.checkout-mid {
+	-fx-pref-height: 170px;
+	-fx-min-height: 170px;
+	-fx-background-radius: 2px;
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 4,0,0,1 );
+}
+
+.checkout-footer {
+	-fx-pref-height: 50px;
+	-fx-min-height: 50px;
+}
+
+.checkout-footer Button {
+	-fx-pref-width: 165px;
+	-fx-pref-height: 50px;
+	-fx-text-fill: #fff;
+	-fx-cursor: hand;
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 4,0,0,1 );
+}
+
+.imageFrame {
+	-fx-background-color: #fff;
+	-fx-border-color: #757575;
+	-fx-border-radius: 2px;
+	-fx-pref-height: 170px;
+	-fx-max-width: 170px;
+}
+
+.shadow {
+	-fx-effect: dropshadow( gaussian , rgba(0,0,0,0.5) , 4,0,0,1 );
+}
+
+.border-white {
+	-fx-border-color: white;
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color: transparent;
+}
+
+.white-background {
+	-fx-background-color: white;
+}
+
+.color-transparent {
+	-fx-background-color: transparent;
+}
+
+.color-transparent-lo {
+	-fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.color-error {
+	-fx-text-fill: #D50002;
+}
+
+.space5 {
+	-fx-spacing: 5px;
+}
+
+.space10 {
+	-fx-spacing: 10px;
+}
+
+.padd5 {
+	-fx-padding: 5px;
+}
+
+.padd10 {
+	-fx-padding: 10px;
+}
+
+.padd15 {
+	-fx-padding: 15px;
+}
+
+.padd-left5 {
+	-fx-padding: 0 0 0 5px;
+}
+
+.padd-left15 {
+	-fx-padding: 0 0 0 15px;
+}
+
+.padd-left20 {
+	-fx-padding: 0 0 0 20px;
+}
+
+.padd-right15 {
+	-fx-padding: 0 15px 0 0;
+}
+
+.padd-right20 {
+	-fx-padding: 0 20px 0 0;
+}
+
+.padd20 {
+	-fx-padding: 20px;
+}
+
+.vgap5 {
+	-fx-vgap: 5px;
+}
+
+.vgap10 {
+	-fx-vgap: 10px;
+}
+
+.hgap5 {
+	-fx-hgap: 5px;
+}
+
+.hgap10 {
+	-fx-hgap: 10px;
+}
+
+.fs10 {
+	-fx-font-size: 10px;
+}
+
+.fs12 {
+	-fx-font-size: 12px;
+}
+
+.fs16 {
+	-fx-font-size: 16px;
+}
+
+.fs18 {
+	-fx-font-size: 18px;
+}
+
+.fs20 {
+	-fx-font-size: 20px;
+}
+
+.fs24 {
+	-fx-font-size: 24px;
+}
+
+.width-30 {
+	-fx-pref-width: 30px;
+}
+
+.width-50 {
+	-fx-min-width: 50px;
+	-fx-pref-width: 50px;
+}
+
+.width-60 {
+	-fx-pref-width: 60px;
+}
+
+.width-70 {
+	-fx-pref-width: 70px;
+}
+
+.width-80 {
+	-fx-pref-width: 80px;
+}
+.width-90 {
+	-fx-pref-width: 90px;
+}
+
+.width-100 {
+	-fx-pref-width: 100px;
+}
+
+.width-120 {
+	-fx-pref-width: 120px;
+}
+
+.width-170 {
+	-fx-pref-width: 170px;
+}
+
+.width-250 {
+	-fx-pref-width: 250px;
+}
+
+.width-300 {
+	-fx-pref-width: 300px;
+}
+
+.width-350 {
+	-fx-pref-width: 350px;
+}
+
+.height-47 {
+	-fx-pref-height: 47px;
+}
+
+.height-60 {
+	-fx-pref-height: 60px;
+}
+
+.height-100 {
+	-fx-pref-height: 100px;
+}
+
+.background-radius-25 {
+	-fx-background-radius: 25px;
+}
+
+.background-radius-50 {
+	-fx-background-radius: 50px;
+}
+
+.bold-text {
+	-fx-font-weight: bold;
+}
+
+.cursor-hand {
+	-fx-cursor: hand;
+}
+
+.radius-2 {
+	-fx-background-radius: 2px;
+	-fx-border-radius: 2px;
+}
+
+.scroll-pane:focused {
+	-fx-background-color: transparent , -fx-box-border, -fx-control-inner-background;
+}
+
+.date-picker-popup {
+	-fx-background-color: #fff;
+}
+
+.date-picker-popup .month-year-pane {
+	-fx-background-color: #fff;
+}
+.date-picker-popup .month-year-pane Label {
+	-fx-text-fill: #212121;
+}
+
+.date-picker-popup .month-year-pane Button {
+	-fx-effect: none;
+}
+
+.chart-alternative-column-fill {
+        -fx-fill: #eeeeee;
+        -fx-stroke: transparent;
+        -fx-stroke-width: 0;
+}
+
+.chart-alternative-row-fill {
+        -fx-fill: #eeeeee;
+        -fx-stroke: transparent;
+        -fx-stroke-width: 0;
+}
+
+.chart-series-area-line {
+	-fx-stroke-width: 2px;
+}

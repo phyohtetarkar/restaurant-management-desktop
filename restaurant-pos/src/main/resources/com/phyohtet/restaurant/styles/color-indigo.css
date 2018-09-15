@@ -1,0 +1,96 @@
+.color-50 {
+	-fx-background-color: #E8EAF6;
+}
+
+.color-100 {
+	-fx-background-color: #C5CAE9;
+}
+
+.color-200 {
+	-fx-background-color: #9FA8DA;
+}
+
+.color-300 {
+	-fx-background-color: #7986CB;
+}
+
+.color-400 {
+	-fx-background-color: #5C6BC0;
+}
+
+.color-500 {
+	-fx-background-color: #3F51B5;
+}
+
+.color-600 {
+	-fx-background-color: #3949AB;
+}
+
+.color-700 {
+	-fx-background-color: #303F9F;
+}
+
+.color-800 {
+	-fx-background-color: #283593;
+}
+
+.color-900 {
+	-fx-background-color: #1A237E;
+}
+
+.color-transparent {
+	-fx-background-color: transparent;
+}
+
+.color-50 Label,
+.color-100 Label,
+.color-200 Label {
+	-fx-text-fill: #000;
+}
+
+.color-300 Label,
+.color-400 Label,
+.color-500 Label,
+.color-600 Label,
+.color-700 Label,
+.color-800 Label,
+.color-900 Label {
+	-fx-text-fill: #fff;
+}
+
+.color-50 Button,
+.color-100 Button,
+.color-200 Button {
+	-fx-text-fill: #fff;
+}
+
+.color-300 Button, 
+.color-400 Button,
+.color-500 Button,
+.color-600 Button,
+.color-700 Button,
+.color-800 Button,
+.color-900 Button {
+	-fx-text-fill: #fff;
+}
+
+.color-50 SVGPath,
+.color-100 SVGPath,
+.color-200 SVGPath {
+	-fx-fill: #000;
+}
+
+.color-300 SVGPath,
+.color-400 SVGPath,
+.color-500 SVGPath,
+.color-600 SVGPath,
+.color-700 SVGPath,
+.color-800 SVGPath,
+.color-900 SVGPath {
+	-fx-fill: #fff;
+}
+
+.naviView Button:pressed, 
+.checkout-footer Button:pressed {
+	-fx-background-color: #20237e;
+}

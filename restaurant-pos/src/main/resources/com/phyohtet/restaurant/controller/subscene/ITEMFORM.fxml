@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.subscene.ItemForm">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <styleClass>
+            <String fx:value="content-box" />
+            <String fx:value="color-600" />
+         </styleClass>
+         <children>
+            <Label fx:id="header" text="Add Item">
+               <styleClass>
+                  <String fx:value="fs16" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+         </children>
+      </HBox>
+      <VBox VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="radius-2" />
+            <String fx:value="white-background" />
+            <String fx:value="padd20" />
+         </styleClass>
+         <children>
+            <GridPane hgap="20.0" vgap="20.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="106.0" minWidth="106.0" prefWidth="106.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="100.0" valignment="TOP" vgrow="ALWAYS" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label text="Category *">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="15.0" text="Name *" GridPane.rowIndex="1">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <ComboBox fx:id="categories" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Choose Category" GridPane.columnIndex="1">
+                     <styleClass>
+                        <String fx:value="customize-combo" />
+                        <String fx:value="color-200" />
+                        <String fx:value="shadow" />
+                        <String fx:value="radius-2" />
+                     </styleClass>
+                  </ComboBox>
+                  <TextField fx:id="name" maxWidth="1.7976931348623157E308" promptText="Enter Item Name" styleClass="customize-border" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label layoutX="60.0" layoutY="110.0" text="Type (Opt)" GridPane.rowIndex="4">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <Label text="Price *" GridPane.rowIndex="2">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <Label text="Description" GridPane.rowIndex="7">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <TextArea fx:id="description" maxWidth="1.7976931348623157E308" prefWidth="200.0" promptText="Say something about this item..." styleClass="customize-border" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="price" maxWidth="1.7976931348623157E308" promptText="Enter Item Price" styleClass="customize-border" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="tax" maxWidth="1.7976931348623157E308" promptText="Enter Tax Amount" styleClass="customize-border" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Tax (Opt)" GridPane.rowIndex="3">
+                     <styleClass>
+                        <String fx:value="bold-text" />
+                        <String fx:value="fs16" />
+                        <String fx:value="text-color-800" />
+                     </styleClass>
+                  </Label>
+                  <ListView fx:id="types" styleClass="customize-border" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.rowSpan="3" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT">
+         <styleClass>
+            <String fx:value="content-box" />
+            <String fx:value="color-500" />
+         </styleClass>
+         <children>
+            <Button mnemonicParsing="false" onAction="#close" prefHeight="32.0" text="CLOSE">
+               <styleClass>
+                  <String fx:value="accent-button" />
+                  <String fx:value="width-100" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#more" prefHeight="32.0" text="MORE">
+               <styleClass>
+                  <String fx:value="accent-button" />
+                  <String fx:value="width-100" />
+               </styleClass>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" onAction="#save" prefHeight="32.0" text="SAVE">
+               <styleClass>
+                  <String fx:value="accent-button" />
+                  <String fx:value="width-100" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../styles/application.css" />
+      <URL value="@../../styles/color-blue.css" />
+      <URL value="@../../styles/table-blue.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="form-container" />
+      <String fx:value="white-background" />
+   </styleClass>
+</VBox>

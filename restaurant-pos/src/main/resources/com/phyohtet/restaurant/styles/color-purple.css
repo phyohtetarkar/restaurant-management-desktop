@@ -1,0 +1,182 @@
+.color-50 {
+	-fx-background-color: #F3E5F5;
+}
+
+.color-100 {
+	-fx-background-color: #E1BEE7;
+}
+
+.color-200 {
+	-fx-background-color: #CE93D8;
+}
+
+.color-300 {
+	-fx-background-color: #BA68C8;
+}
+
+.color-400 {
+	-fx-background-color: #AB47BC;
+}
+
+.color-500 {
+	-fx-background-color: #9C27B0;
+}
+
+.color-600 {
+	-fx-background-color: #8E24AA;
+}
+
+.color-700 {
+	-fx-background-color: #7B1FA2;
+}
+
+.color-800 {
+	-fx-background-color: #6A1B9A;
+}
+
+.color-900 {
+	-fx-background-color: #4A148C;
+}
+
+.color-accent {
+	-fx-background-color: #FDD835;
+}
+
+.color-50 Label,
+.color-100 Label,
+.color-200 Label,
+.color-300 Label {
+	-fx-text-fill: #4A148C;
+}
+
+.color-400 Label,
+.color-500 Label,
+.color-600 Label,
+.color-700 Label,
+.color-800 Label,
+.color-900 Label {
+	-fx-text-fill: #fff;
+}
+
+.color-50 Button,
+.color-100 Button,
+.color-200 Button,
+.color-300 Button {
+	-fx-text-fill: #4A148C;
+}
+
+.color-400 Button,
+.color-500 Button,
+.color-600 Button,
+.color-700 Button,
+.color-800 Button,
+.color-900 Button {
+	-fx-text-fill: #fff;
+}
+
+.color-50 SVGPath,
+.color-100 SVGPath,
+.color-200 SVGPath,
+.color-300 SVGPath {
+	-fx-fill: #424242;
+}
+
+.color-400 SVGPath,
+.color-500 SVGPath,
+.color-600 SVGPath,
+.color-700 SVGPath,
+.color-800 SVGPath,
+.color-900 SVGPath {
+	-fx-fill: #fff;
+}
+
+.text-fill-default {
+	-fx-text-fill: #fff;
+}
+
+.text-fill-inverse {
+	-fx-text-fill: #424242;
+}
+
+.text-fill-default SVGPath {
+	-fx-fill: #fff;
+}
+
+.text-fill-inverse SVGPath {
+	-fx-fill: #424242;
+}
+
+.naviView Button:pressed, 
+.checkout-footer Button:pressed,
+.topView Button:pressed {
+	-fx-background-color: #4A148C;
+}
+
+.tabView ToggleButton:selected {
+	-fx-text-fill: #6A1B9A;
+}
+
+.tabView ToggleButton:selected SVGPath {
+	-fx-fill: #6A1B9A;
+}
+
+.customize-border {
+	-fx-border-color: #6A1B9A;
+	-fx-border-radius: 2px;
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color: transparent;
+}
+
+.customize-combo .combo-box-popup .list-view {
+    -fx-background-color: #fff;
+    -fx-border-color: #9E9E9E;
+    -fx-border-radius: 2px;
+}
+
+.customize-combo .combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #8E24AA;
+    -fx-text-fill: #fff;
+}
+
+.customize-combo .combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #8E24AA;
+    -fx-text-fill: #fff;
+}
+
+.list-view .list-cell:filled:selected {
+	-fx-background-color: #8E24AA;
+    -fx-text-fill: #fff;
+}
+
+.shadowSolid {
+	-fx-effect: dropshadow(two-pass-box, #E1BEE7, 0.7, 3, 2, 2);
+}
+
+.context-menu {
+    -fx-background-color: #fff;
+    -fx-border-color: #a5a5a5;
+    -fx-font-weight: normal;
+}
+
+.context-menu .menu-item SVGPath {
+	-fx-fill: #424242;
+}
+
+.context-menu .menu-item:focused {
+  -fx-background-color: #7B1FA2;
+}
+
+.context-menu .menu-item:focused .label {
+  -fx-text-fill: white;
+}
+
+.context-menu .menu-item:focused SVGPath {
+  -fx-fill: white;
+}
+
+.custom-chip {
+	-fx-background-color: #E7E7E7;
+	-fx-background-radius: 10px;
+	-fx-text-fill: #6A1B9A;
+	-fx-font-weight: bold;
+}

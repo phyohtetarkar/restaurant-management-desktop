@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.phyohtet.restaurant.view.util.ResponsiveFlowPane?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox styleClass="contentView" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.Categories">
+   <children>
+      <VBox layoutX="15.0" layoutY="15.0" prefWidth="100.0" styleClass="shadow" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" VBox.vgrow="NEVER">
+               <children>
+                  <TextField fx:id="name" promptText="Category Name" styleClass="width-250" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#add" styleClass="accent-button" text="Add New" />
+               </children>
+               <styleClass>
+                  <String fx:value="color-400" />
+                  <String fx:value="content-flat-box" />
+               </styleClass>
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="border-white" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+               <content>
+                  <ResponsiveFlowPane fx:id="pane">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="flowPane-container" />
+                     </styleClass>
+                  </ResponsiveFlowPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../styles/application.css" />
+      <URL value="@../styles/color-blue.css" />
+   </stylesheets>
+</HBox>

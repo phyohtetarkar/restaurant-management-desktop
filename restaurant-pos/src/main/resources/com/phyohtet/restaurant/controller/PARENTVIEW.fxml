@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<BorderPane styleClass="mainFrame" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.ParentView">
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="contentView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox styleClass="shadow" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane>
+               <styleClass>
+                  <String fx:value="topView" />
+                  <String fx:value="color-600" />
+               </styleClass>
+               <children>
+                  <Label contentDisplay="RIGHT" layoutX="48.0" text="Restaurant POS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="fs20" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <HBox alignment="CENTER_RIGHT" layoutX="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Button contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#close">
+                           <graphic>
+                              <SVGPath content="M17.813 5.156c1.922 1.641 3.188 4.125 3.188 6.844 0 4.969-4.031 9-9 9s-9-4.031-9-9c0-2.719 1.266-5.203 3.188-6.844l1.406 1.406c-1.547 1.266-2.578 3.234-2.578 5.438 0 3.891 3.094 6.984 6.984 6.984s6.984-3.094 6.984-6.984c0-2.203-0.984-4.125-2.578-5.391zM12.984 3v9.984h-1.969v-9.984h1.969z" stroke="WHITE" />
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="color-transparent" />
+                              <String fx:value="bold-text" />
+                              <String fx:value="width-50" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" styleClass="tabView">
+               <children>
+                  <ToggleButton maxHeight="1.7976931348623157E308" mnemonicParsing="false" selected="true" styleClass="white-background" text="Home">
+                     <graphic>
+                        <SVGPath content="M9.984 20.016h-4.969v-8.016h-3l9.984-9 9.984 9h-3v8.016h-4.969v-6h-4.031v6z" />
+                     </graphic>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="menu" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton layoutX="20.0" layoutY="12.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-background" text="Pos" toggleGroup="$menu">
+                     <graphic>
+                        <SVGPath content="M12 18.984c0.563 0 0.984-0.422 0.984-0.984s-0.422-0.984-0.984-0.984-0.984 0.422-0.984 0.984 0.422 0.984 0.984 0.984zM3.984 5.016v10.969h16.031v-10.969h-16.031zM20.016 18h3.984c0 1.078-0.938 2.016-2.016 2.016h-19.969c-1.078 0-2.016-0.938-2.016-2.016h3.984c-1.078 0-1.969-0.938-1.969-2.016v-10.969c0-1.078 0.891-2.016 1.969-2.016h16.031c1.078 0 1.969 0.938 1.969 2.016v10.969c0 1.078-0.891 2.016-1.969 2.016z" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton layoutX="104.0" layoutY="12.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-background" text="Master" toggleGroup="$menu">
+                     <graphic>
+                        <SVGPath content="M3.984 11.016v1.969h2.016v-1.969h-2.016zM2.016 14.016v-4.031h19.969v4.031h-19.969zM6 6.984v-1.969h-2.016v1.969h2.016zM2.016 3.984h19.969v4.031h-19.969v-4.031zM3.984 17.016v1.969h2.016v-1.969h-2.016zM2.016 20.016v-4.031h19.969v4.031h-19.969z" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton layoutX="188.0" layoutY="12.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-background" text="Report" toggleGroup="$menu">
+                     <graphic>
+                        <SVGPath content="M17.016 9v-2.016h-10.031v2.016h10.031zM17.016 12.984v-1.969h-10.031v1.969h10.031zM14.016 17.016v-2.016h-7.031v2.016h7.031zM12 3c-0.563 0-0.984 0.422-0.984 0.984s0.422 1.031 0.984 1.031 0.984-0.469 0.984-1.031-0.422-0.984-0.984-0.984zM18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h4.172c0.422-1.172 1.5-2.016 2.813-2.016s2.391 0.844 2.813 2.016h4.172z" />
+                     </graphic>
+                  </ToggleButton>
+                  <ToggleButton layoutX="267.0" layoutY="12.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" styleClass="white-background" text="Analysis" toggleGroup="$menu">
+                     <graphic>
+                        <SVGPath content="M17.016 17.016v-4.031h-2.016v4.031h2.016zM12.984 17.016v-10.031h-1.969v10.031h1.969zM9 17.016v-7.031h-2.016v7.031h2.016zM18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h13.969z" />
+                     </graphic>
+                  </ToggleButton>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="title" text="POS">
+                           <styleClass>
+                              <String fx:value="fs16" />
+                              <String fx:value="text-color-800" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children></HBox>
+         </children>
+      </VBox>
+   </top>
+   <stylesheets>
+      <URL value="@../styles/application.css" />
+      <URL value="@../styles/color-blue.css" />
+   </stylesheets>
+   <bottom>
+      <AnchorPane styleClass="footerView" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="loading" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="1141.0" layoutY="10.0" styleClass="bold-text" text="Loading Data" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+               <graphic>
+                  <ProgressBar prefWidth="100.0" visible="false" />
+               </graphic>
+            </Label>
+            <Label fx:id="error" layoutX="27.0" layoutY="15.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+               <styleClass>
+                  <String fx:value="color-error" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

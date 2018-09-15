@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.phyohtet.restaurant.controller.Analysis">
+   <stylesheets>
+      <URL value="@../styles/application.css" />
+      <URL value="@../styles/color-blue.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+         <styleClass>
+            <String fx:value="content-box" />
+            <String fx:value="color-600" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <HBox fx:id="sContents" alignment="CENTER_LEFT" styleClass="space10">
+               <children>
+                  <ComboBox fx:id="obj" prefWidth="150.0">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="shadow" />
+                        <String fx:value="customize-combo" />
+                     </styleClass>
+                  </ComboBox>
+                  <TextField fx:id="year" promptText="Year" />
+                  <ComboBox fx:id="month" layoutX="170.0" layoutY="19.0" prefWidth="150.0" promptText="Month">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="shadow" />
+                        <String fx:value="customize-combo" />
+                     </styleClass>
+                  </ComboBox>
+                  <CheckBox fx:id="monthly" mnemonicParsing="false" styleClass="text-fill-default" text="Monthly" />
+                  <Button mnemonicParsing="false" onAction="#reset" text="Reset">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#analyze" text="Analyze">
+                     <styleClass>
+                        <String fx:value="width-100" />
+                        <String fx:value="accent-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <ComboBox fx:id="choose" prefWidth="150.0" promptText="Analyze By">
+                     <styleClass>
+                        <String fx:value="white-background" />
+                        <String fx:value="shadow" />
+                        <String fx:value="customize-combo" />
+                     </styleClass>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox VBox.vgrow="ALWAYS">
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="white-background" />
+         </styleClass>
+         <children>
+            <BarChart fx:id="chart" animated="false" title="Sale Report" verticalGridLinesVisible="false" HBox.hgrow="ALWAYS">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </HBox>
+   </children>
+   <styleClass>
+      <String fx:value="contentView" />
+      <String fx:value="padd5" />
+      <String fx:value="space5" />
+   </styleClass>
+</VBox>

@@ -1,0 +1,21 @@
+.rightColumn TableView:focused {
+	-fx-background-color: transparent , -fx-box-border, -fx-control-inner-background;
+}
+
+.rightColumn TableView .column-header{
+	-fx-border-color: #303F9F;
+	-fx-background-color: #303F9F;
+}
+
+.rightColumn TableView .table-cell {
+	-fx-alignment: center;
+}
+
+.rightColumn TableView .table-row-cell:selected {
+	-fx-background-color: #9FA8DA;
+}
+
+.rightColumn TableView SVGPath, Label{
+	-fx-fill: white;
+	-fx-text-fill: white;	
+}
