@@ -1,10 +1,10 @@
 @font-face {
-    font-family: Zawgyi-One;
-    src: url('Zawgyi-One.ttf');
+    font-family: Pyidaungsu-Regular;
+    src: url('Pyidaungsu-Regular.ttf');
 }
 
 TextField, TextArea, TableView .table-cell, .combo-box, .item-box Label, .data-box Label, ListView {
-	-fx-font-family: Zawgyi-One;
+	-fx-font-family: Pyidaungsu-Regular;
 }
 
 .mainFrame {

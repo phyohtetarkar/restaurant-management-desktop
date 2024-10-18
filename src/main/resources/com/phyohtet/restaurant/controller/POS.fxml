@@ -194,7 +194,7 @@
                               <Insets right="15.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField nodeOrientation="RIGHT_TO_LEFT" text="5%" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <TextField nodeOrientation="RIGHT_TO_LEFT" text="0%" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets right="15.0" />
                            </GridPane.margin></TextField>
@@ -224,7 +224,7 @@
                               <Insets left="15.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label text="2850Ks" GridPane.columnIndex="1">
+                        <Label text="0Ks" GridPane.columnIndex="1">
                            <styleClass>
                               <String fx:value="bold-text" />
                               <String fx:value="fs18" />
