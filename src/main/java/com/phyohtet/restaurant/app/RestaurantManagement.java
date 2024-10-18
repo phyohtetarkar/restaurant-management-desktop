@@ -20,7 +20,7 @@ public class RestaurantManagement extends Application {
 	}
 
 	@Override
-	public void start(Stage stage) throws Exception {
+	public void start(Stage stage) {
 		try {
 			Parent root = FXMLLoader.load(ParentView.class.getResource("PARENTVIEW.fxml"));
 			Scene scene = new Scene(root);
@@ -33,7 +33,7 @@ public class RestaurantManagement extends Application {
 	}
 
 	@Override
-	public void stop() throws Exception {
+	public void stop() {
 		SpringContextManager.close();
 	}
 

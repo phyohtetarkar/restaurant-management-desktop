@@ -1,16 +1,16 @@
 package com.phyohtet.restaurant.entity;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import static jakarta.persistence.GenerationType.IDENTITY;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 
 @SuppressWarnings("serial")
 @Entity
-public class Category implements Serializable {
+public class OrderHead implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -46,5 +46,4 @@ public class Category implements Serializable {
 	public String toString() {
 		return name;
 	}
-
 }

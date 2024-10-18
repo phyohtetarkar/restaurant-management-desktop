@@ -22,7 +22,7 @@ public class CategoryService {
 	}
 	
 	public Category findById(int id) {
-		return repo.findOne(id);
+		return repo.findById(id).orElse(null);
 	}
 
 	@Transactional

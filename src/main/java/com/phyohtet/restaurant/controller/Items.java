@@ -100,7 +100,7 @@ public class Items implements Initializable {
 		sName.setText(null);
 	}
 
-	private synchronized List<Item> call() {
+	private List<Item> call() {
 		return itemService.findBy(sCategory.getValue(), sType.getValue(), sName.getText());
 	}
 

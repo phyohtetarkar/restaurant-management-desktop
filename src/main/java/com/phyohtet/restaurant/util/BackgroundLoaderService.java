@@ -7,7 +7,7 @@ import javafx.concurrent.Task;
 
 public class BackgroundLoaderService<T> extends Service<T> {
 
-	private Supplier<T> loader;
+	private final Supplier<T> loader;
 
 	public BackgroundLoaderService(Supplier<T> loader) {
 		this.loader = loader;
@@ -27,4 +27,11 @@ public class BackgroundLoaderService<T> extends Service<T> {
 	protected void succeeded() {
 		Navigator.showLoading(false);
 	}
+
+	@Override
+	protected void failed() {
+		Navigator.showLoading(false);
+	}
+
+
 }
